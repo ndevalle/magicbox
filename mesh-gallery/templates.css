@@ -4,7 +4,7 @@
 }	
 
 .left.fixed-column{
-	margin:0px 10px 0px 0px; /* margin-right */
+	margin:0px 10px 0px 0px; /* margin-right, gutter */
 }
 
 .right.fluid-column{
@@ -21,7 +21,7 @@
 } 
 
 .right.fixed-column {
-	margin-left:-290px !important; /* same as width, plus gutter */
+	margin-left:-290px !important; /* same as width */
 }
 
 
@@ -31,8 +31,9 @@
 }
 
 
-
+/* ------------------------------------------------------- */
 /* just to highlight columns - you can delete these styles */
+
 .box {
 	background-image: none;
 }
