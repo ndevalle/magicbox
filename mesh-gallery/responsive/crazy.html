@@ -1,0 +1,89 @@
+<!doctype html>
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7 ]> <html lang="es" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="es" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="es" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="es" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+	<head>
+		<title>Elastic Layout - 2 Columns, left sidebar</title>    
+
+		<style>
+					
+			/* ------------------------------------------------------- *
+			 * --- just to highlight columns - you can delete these -- *
+			 * -------------    use chico.css for styles   ----------- *
+			 * ------------------------------------------------------- */
+			
+			body {
+				color: #333333;
+			    font: 13px/20px Arial,Helvetica,"Nimbus Sans L",sans-serif;
+
+			}
+			
+			.box {
+				border: 1px solid #ccc;
+				padding: 10px;
+				margin: 10px auto;
+			}
+			
+			.header {
+				height: 50px;
+				padding: 20px 10px;
+				background: #eee;
+				margin: 10px auto 0px;
+			}
+			
+			.download {
+				text-align: center;
+			}
+			.footer, .clearfix {
+				clear:both;
+				text-align: center;
+				margin: 10px auto;
+				background: #eee;
+				
+			}
+			</style>
+			
+		
+			<link rel="stylesheet" href="../chico-mesh.css"><!-- fluid grids -->
+		
+		<style>
+			/* two items */
+			div:first-child{
+			    background: black;
+			}
+			
+		</style>
+	</head>			
+			
+	<body>
+		<div class="box">
+			<h1>Crazy Grids</h1>
+			<div class="ch-g-row">
+				<div class="ch-g1-2">
+					<div class="box leftcolumn">1/2</div>
+				</div>
+				<div class="ch-g1-2">
+					<div class="box rightcolumn">1/2</div>
+				</div>
+			</div>
+			<div class="ch-g-row">
+				<div class="ch-g1-4">
+					<div class="box leftcolumn">1/4</div>
+				</div>
+				<div class="ch-g1-4">
+					<div class="box centercolumn">1/4</div>
+				</div>		
+				<div class="ch-g1-4">
+					<div class="box centercolumn">1/4</div>
+				</div>		
+				<div class="ch-g1-4">
+					<div class="box rightcolumn">1/4</div>
+				</div>	
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</body>
+</html>

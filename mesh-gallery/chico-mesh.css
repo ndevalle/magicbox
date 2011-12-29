@@ -33,6 +33,10 @@
 .ch-g1-10 {
 float:left;
 vertical-align: top;
+-moz-box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+			box-sizing:border-box;
+			padding: 0px 10px;
 }
 
 .ch-g1 { width:100%;}
@@ -58,10 +62,3 @@ vertical-align: top;
 .ch-g1-8 { width:12.5%;}
 .ch-g1-10 { width:10%; }
 
-
-
-/* gutters: you can use these on your inner elements */
-
-.rightcolumn {margin-left: 10px;}
-.leftcolumn {margin-right: 10px;}
-.centercolumn {margin-left: 10px; margin-right: 10px;}
