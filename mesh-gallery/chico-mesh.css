@@ -146,3 +146,37 @@
 	}
 }
 
+
+/* IE7 fallback for box-sizing */
+
+.ie7 .ch-g1,
+.ie7 .ch-g9-10,
+.ie7 .ch-g7-8,
+.ie7 .ch-g5-6,
+.ie7 .ch-g4-5, .ie7 .ch-g8-10,
+.ie7 .ch-g3-4, .ie7 .ch-g6-8,
+.ie7 .ch-g7-10,
+.ie7 .ch-g2-3, .ie7 .ch-g4-6,
+.ie7 .ch-g5-8,
+.ie7 .ch-g3-5, .ie7 .ch-g6-10,
+.ie7 .ch-g1-2, .ie7 .ch-g2-4, .ie7 .ch-g3-6, .ie7 .ch-g4-8, .ie7 .ch-g5-10,
+.ie7 .ch-g2-5, .ie7 .ch-g4-10,
+.ie7 .ch-g3-8,
+.ie7 .ch-g1-3r,
+.ie7 .ch-g1-3, .ie7 .ch-g2-6,
+.ie7 .ch-g3-10,
+.ie7 .ch-g1-4, .ie7 .ch-g2-8,
+.ie7 .ch-g1-5, .ie7 .ch-g2-10,
+.ie7 .ch-g1-6r,
+.ie7 .ch-g1-6,
+.ie7 .ch-g1-8,
+.ie7 .ch-g1-10 {
+			float:left;
+			vertical-align: top;
+}
+
+/* gutters: you can use these on your inner elements */
+
+.rightcolumn {margin-left: 10px;}
+.leftcolumn {margin-right: 10px;}
+.centercolumn {margin-left: 10px; margin-right: 10px;}
