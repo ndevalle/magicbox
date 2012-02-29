@@ -21,7 +21,7 @@
 			<legend>Say something!</legend>
 			<input type="text" size="30" placeholder="Tell me a (mini) story..." id="speech">
 			<input class="ch-btn ch-secondary ch-skin" type="button" value="Save" id="save">
-			<a href="step2.html" id="next" style="display: none;">Now go to the next step >></a>
+			<a href="step2.html" id="next" class="ch-hide">Now go to the next step >></a>
 		</fieldset>
 	</form>
 </div>
@@ -42,12 +42,11 @@ $("#save").bind("click", function(){
 	var theSpeech = sessionStorage.getItem("theSpeech");
 	
 	// change button value and disable it
-	$(this).val("Saved!");
-	$(this).attr("disabled", "disabled");
+	$(this).val("Saved!").attr("disabled", "disabled");
 	
 	// show link to next step
-	$("#next").show();
-	console.log("you've said " + theSpeech);
+	$("#next").removeClass("ch-hide");
+	console.log("you've said: " + theSpeech);
 	});
 
 
