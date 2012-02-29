@@ -21,13 +21,15 @@ $("#save").bind("click", function(){
 	var speech = $('#speech').val(); 
 	
 	//save a value
-	sessionStorage.setItem("theSpeech", speech);
-	//retrieve item
-	var theSpeech = sessionStorage.getItem("theSpeech")
+sessionStorage.setItem("name", "Nicholas");
+
+//retrieve item
+var name = sessionStorage.getItem("name");
 	
 	$(this).val("Saved!");
 	// show link to next step
-	alert(theSpeech);
+	alert(speech)
+	alert(name);
 	});
 
 

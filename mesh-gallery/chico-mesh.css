@@ -1,9 +1,9 @@
 /*
  * Grid System
  * @autor: Chico-UI
- * @web: http://mercadolibre.github.com/chico
- * @version: 0.1
- * @mod: 24/02/11
+ * @web: http://chico-ui.com.ar
+ * @version: 0.2
+ * @mod: 02/01/12
  *
  */
  
@@ -173,10 +173,11 @@
 .ie7 .ch-g1-10 {
 			float:left;
 			vertical-align: top;
+			padding: 0;
 }
 
 /* gutters: you can use these on your inner elements */
 
-.rightcolumn {margin-left: 10px;}
-.leftcolumn {margin-right: 10px;}
-.centercolumn {margin-left: 10px; margin-right: 10px;}
+.ie7 .rightcolumn {margin-left: 10px;}
+.ie7 .leftcolumn {margin-right: 10px;}
+.ie7 .centercolumn {margin-left: 10px; margin-right: 10px;}

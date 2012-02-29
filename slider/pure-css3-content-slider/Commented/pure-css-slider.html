@@ -1,0 +1,88 @@
+<!-- 
+
+Author: Developed by Caleb Jacob
+
+Author Website: http://iamceege.com/
+
+Author Contact: caleb@iamceege.com
+
+Description: This is a pure CSS content slider developed to remove the shroud of mystery behind CSS3 animations and transitions.
+
+Version: 1.0
+
+Browser Support: WebKit and FireFox
+
+-----------------------------------------------
+
+Usage: You are free to use and abuse this code anyway you'd like for any project (personal or commercial). Please don't directly redistribute and sell this code in any way (if you do, then you don't get a cookie). However, if you're interested in buying or selling this code, feel free to contact me at: caleb@iamceege.com
+
+-----------------------------------------------
+
+IMPORTANT: If you are wanting to add or subtract to the current amount of slides (4), you will need to change all of the CSS keyframe animations in css/slider.css to reflect your changes. Unfortunately, this is one of the downfalls of stricltly using CSS.
+
+-----------------------------------------------
+
+If you do end up using this script or finding it helpful, I'd love to hear your thoughts and see what you've done with it! (caleb@iamceege.com)
+
+Thanks! And enjoy! :) 
+
+ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="css/reset.css" rel="stylesheet" type="text/css" /> <!-- This CSS creates a ninja that kicks the butt of any browser that rebels against conformity *cough*IE*cough* -->
+<link href="css/slider.css" rel="stylesheet" type="text/css" /> <!-- This CSS creates the magic for the slider -->
+<link href="css/main.css" rel="stylesheet" type="text/css" /> <!-- This CSS is just boring -->
+<title>The Pure CSS 3 Slider</title>
+</head>
+<body>
+<div class="container">
+	<div id="slider">
+		<div id="mask"><!-- This masks an unordered list (<ul>) while it's sliding from right to left. Here's an illustration of what's going on (The ='s are the slides and the [ ] is the mask):
+		
+						Slide 1:    [=]=== 
+						Slide 2:   =[=]==
+						Slide 3:  ==[=]=
+						Slide 4: ===[=]
+						
+						In summary, as the unordered list moves from right to left, the mask ([ ]) will only show the content (portion of the unordered list) that is currently inside of it. If it weren't for this mask, you'd see all of the slides going across your window.
+						-->
+			<ul><!-- Sets up the previously mentioned unordered list. This will structure the slides and lay them out horizontally/inline with eachother (by default, an unordered list would display list items (<li>) vertically. However, with some CSS magic (display:inline;), the list items will line up horizontally -->
+				<li>
+					<iframe src="https://rpm.newrelic.com/accounts/39947/applications/330744/traced_errors" width="1000" height="700" frameborder="0" scrolling="no"></iframe><!-- This slide is pulling an entire web page from another website using the <iframe> tag. This goes to show that you can insert anything into the slides - even a video! This is why it's important for the slider to pause on mouseover. The pause will allow people to interact with whatever your slide contains - without it slapping them in the face and sliding away (that would suck)  -->
+					<span>
+						<h2>New Relic - Traced Errors</h2>
+					</span>
+				</li>
+				<li>
+					<iframe src="https://rpm.newrelic.com/accounts/39947/custom_views/121" width="1000" height="700" frameborder="0" scrolling="no"></iframe><!-- This slide is pulling an entire web page from another website using the <iframe> tag. This goes to show that you can insert anything into the slides - even a video! This is why it's important for the slider to pause on mouseover. The pause will allow people to interact with whatever your slide contains - without it slapping them in the face and sliding away (that would suck)  -->
+					<span>
+						<h2>Real Time Analytics</h2>
+					</span>
+				</li>
+				<li>
+					<iframe src="https://rpm.newrelic.com/accounts/39947/custom_views/121" width="1000" height="700" frameborder="0" scrolling="no"></iframe><!-- This slide is pulling an entire web page from another website using the <iframe> tag. This goes to show that you can insert anything into the slides - even a video! This is why it's important for the slider to pause on mouseover. The pause will allow people to interact with whatever your slide contains - without it slapping them in the face and sliding away (that would suck)  -->
+					<span>
+						<h2>Other frame</h2>
+					</span>
+				</li>
+				<li>
+					<iframe src="https://rpm.newrelic.com/accounts/39947/custom_views/121" width="1000" height="700" frameborder="0" scrolling="no"></iframe><!-- This slide is pulling an entire web page from another website using the <iframe> tag. This goes to show that you can insert anything into the slides - even a video! This is why it's important for the slider to pause on mouseover. The pause will allow people to interact with whatever your slide contains - without it slapping them in the face and sliding away (that would suck)  -->
+					<span>
+						<h2>New Relic Custom Views</h2>
+					</span>
+				</li>
+			</ul><!-- Ends the unordered list that contains our slides -->
+		</div><!-- Ends the slider mask. Everything outside of this tag will no longer be masked -->
+		<div id="progress"><!-- Sets up our progress bar to show the remaining time of the current slide. This will be animated to go from 1px wide to the full width of the slide (600px) -->
+		</div>
+		<div id="overlay"><!-- Used to add a dope gradient ontop of the slider. Simply remove this <div> if you don't want any type of overlay -->
+		</div>
+		<div id="pause"><!-- This contains the pause icon that appears when hovering over the slider. Again, if you don't want the icon to appear, simply remove this <div> -->
+		</div>
+	</div>
+</div>
+</body>
+</html>
