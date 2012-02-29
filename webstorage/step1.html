@@ -37,7 +37,7 @@ $("#save").bind("click", function(){
 	var speech = $('#speech').val(); 
 	
 	//save the value
-	sessionStorage.setItem("theSpeech", speech);
+	sessionStorage.theSpeech = speech;
 
 	//retrieve value, not necessary now
 	//sessionStorage.getItem("theSpeech");

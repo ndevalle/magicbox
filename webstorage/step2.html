@@ -35,12 +35,12 @@
 <script>
 
 // lets bring back the speech!
-$("blockquote").text(sessionStorage.getItem("theSpeech"));
+$("blockquote").text(sessionStorage.theSpeech);
 
 // delete it and go to step 1 again
 $("#delete").bind("click", function(){
 	
-	sessionStorage.removeItem("theSpeech");
+	delete sessionStorage.theSpeech;
 	document.location.href="step1.html";
 	
 });
