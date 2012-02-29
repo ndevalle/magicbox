@@ -33,21 +33,22 @@
 
 
 $("#save").bind("click", function(){
+	
 	var speech = $('#speech').val(); 
 	
 	//save the value
 	sessionStorage.setItem("theSpeech", speech);
 
-	//retrieve value
-	var theSpeech = sessionStorage.getItem("theSpeech");
+	//retrieve value, not necessary now
+	//sessionStorage.getItem("theSpeech");
 	
 	// change button value and disable it
 	$(this).val("Saved!").attr("disabled", "disabled");
 	
 	// show link to next step
 	$("#next").removeClass("ch-hide");
-	console.log("you've said: " + theSpeech);
-	});
+	
+});
 
 
 </script>
