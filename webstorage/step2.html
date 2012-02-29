@@ -40,7 +40,7 @@ $("blockquote").text(sessionStorage.getItem("theSpeech"));
 // delete it and go to step 1 again
 $("#delete").bind("click", function(){
 	sessionStorage.removeItem("theSpeech");
-	$("blockquote").text(sessionStorage.getItem("theSpeech"));
+	document.location.href="step1.html";
 	});
 
 </script>
