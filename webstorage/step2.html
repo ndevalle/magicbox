@@ -27,6 +27,7 @@
 	<h1>HTML5's sessionStorage</h1>
 	<h3>I've got memory! This is what you said:</h3>
 	<blockquote></blockquote>
+	<input type="button" value="Delete everything and start again" id="delete" class="ch-btn ch-secondary ch-skin">
 </div>
 
 <script src="../chico/js/jquery.js"></script>
@@ -34,9 +35,13 @@
 <script>
 
 // lets bring back the speech!
-console.log("do I remember the variable? -> " + theSpeech);
 $("blockquote").text(sessionStorage.getItem("theSpeech"));
 
+// delete it and go to step 1 again
+$("#delete").bind("click", function(){
+	sessionStorage.removeItem("theSpeech");
+	console.log("deleted");
+	});
 
 </script>
 </body>
