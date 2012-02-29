@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>Step 1</title>
+</head>
+<body>
+<form>
+	<fieldset>
+		<legend>Say something!</legend>
+		<input type="text" size="30" placeholder="Whatever you wanna say..." id="speech">
+		<input type="button" value="Save" id="save">
+	</fieldset>
+</form>
+
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script>
+
+
+
+$("#save").bind("click", function(){
+	var speech = $('#speech').val(); 
+	
+	//save a value
+	sessionStorage.theSpeech = speech;
+	
+	$(this).val("Saved!");
+	// show link to next step
+	alert(theSpeech);
+	});
+
+
+</script>
+</body>
+</html>
