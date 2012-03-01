@@ -34,8 +34,9 @@
 
 $("#save").bind("click", function(){
 	
+	
 	//save the value
-	sessionStorage.theSpeech = $('#speech').val();
+	sessionStorage.setItem("theSpeech", $('#speech').val());
 	
 	// change button value and disable it
 	$(this).val("Saved!").attr("disabled", "disabled");
@@ -43,7 +44,7 @@ $("#save").bind("click", function(){
 	// show link to next step
 	$("#next").removeClass("ch-hide");
 	
-});
+	});
 
 
 </script>
