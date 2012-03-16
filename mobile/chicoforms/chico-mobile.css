@@ -1166,7 +1166,8 @@ select[multiple],
 
 input,
 textarea, 
-select{
+select,
+.validator {
 	-webkit-box-sizing: border-box; 
 	-moz-box-sizing: border-box;    
 	box-sizing: border-box;         
@@ -1403,6 +1404,19 @@ input[readonly]:focus {
 	width: 96%;*/
 }
 
+/*validators*/
+
+input:invalid {
+    border-color: red;
+    color: red;
+}
+
+.validator {
+	color: red;
+	font-size: 12px;
+	margin: 0 5px;
+	display: none;
+	}
 
 /* MODAL */
 .ch-modal {
