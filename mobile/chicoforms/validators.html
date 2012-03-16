@@ -432,13 +432,13 @@
 	<script>
 	$('input').blur(function() {
 		if ($('input[type=email]').is(':invalid')) {
-		   $(".validator.email").show();
+		   $(".validator.email").css("display", "inline-block");
 		} 
 		if ($('input[type=url]').is(':invalid')) {
-		   $(".validator.url").show();
+		   $(".validator.url").css("display", "inline-block");
 		} 
 		if ($('input[type=number]').is(':invalid')) {
-		   $(".validator.number").show();
+		   $(".validator.number").css("display", "inline-block");
 		} 
 	});
 	</script>
