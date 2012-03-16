@@ -12,6 +12,7 @@
 body {
 	margin: 0 auto;
 	position: relative;
+	padding: 0 10px;
 }
 
 .ch-layout {
@@ -1157,7 +1158,7 @@ input,
 textarea,
 select[multiple],
 .ch-form-select-multiple {
-	border:1px solid #CCCCCC;
+	border:1px solid #888;
 	-webkit-box-shadow:1px 1px 1px rgba(204, 204, 204, 0.3) inset;
 	box-shadow:1px 1px 1px rgba(204, 204, 204, 0.3) inset;
 	padding:5px 4px;
@@ -1186,8 +1187,8 @@ input:focus,
 textarea:focus,
 select[multiple]:focus,
 .ch-form-select-multiple:focus {
-	border: 1px solid #BFB35D;
-	padding: 4px 3px;
+	border: 1px solid #333;
+	padding:5px 4px;
 	outline: 0;
 }
 
