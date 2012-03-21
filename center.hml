@@ -1,39 +1,18 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Absolute</title>
+		<title>Centered</title>
 		<style>
 		
-		header {
-			height: 50px;
-				
-			}
-		
 
-		.content-splash {
-			margin: 0 auto;
-			background: #ccc;
-			border-radius: 5px;
-			padding: 10px;
+		.layout {
+			background: #eee;
 			position: absolute;
-			bottom: 20px;
-			left: 0;
+			top: 0;
 			right: 0;
-			top: 50px;
-			}
-			
-		aside .credits {
-			display: none;
-			position: absolute;
-			bottom: 10px;
-			font-size: 12px;
+			bottom: 0;
+			left: 0;
 			}	
-			
-			
-		footer {
-			clear: both;
-			height: 20px;
-			}
 		
 		section {
 			text-align: center;
@@ -44,6 +23,8 @@
 			
 		section div {
 			height: 50px;
+			line-height: 50px;
+			border-radius: 5px;
 			background: #fff;
 			margin-top: -50%;
 			margin-left: -50%;
@@ -52,10 +33,8 @@
 	</head>
 	
 	<body>
-	
-		<header>Header</header>
 		
-		<div class="content-splash">
+		<div class="layout">
 				<section>
 					
 					<div>Loading...</div>
