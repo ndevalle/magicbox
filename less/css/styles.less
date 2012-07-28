@@ -74,7 +74,7 @@ table {
 
 /* Less flavorable variables */
 
-@base-color: #ff0000;
+@base-color: `getElementByTagName(btn).value()`;
 
 
 /*
@@ -112,7 +112,7 @@ table {
 	background-image: linear-gradient(@from, @to);
 	-webkit-box-shadow: inset 0px 1px rgba(186, 206, 255, .6);
 	box-shadow: inset 0px 1px rgba(186, 206, 255, .6);
-	border: 1px solid @base-color;
+	border: 1px solid darken (@base-color, 20%);
 	color: #ffffff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
 }
