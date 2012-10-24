@@ -30,40 +30,35 @@
 				<p>On Login step, I saved two keys: </p>
 				<ul class="ch-list">
 					<li>
-						<p>The fact that you submited the login form</p>
+						The fact that you submited the login form
 						<pre>
-localStorage.setItem('login', 'true');
-						</pre>
+localStorage.setItem('login', 'true');</pre>
 					</li>
 					<li>
-						<p>The value of the email field</p>
+						The value of the email field
 						<pre>
-localStorage.setItem('email', $("#email").val()); // this is jquery
-						</pre>
+localStorage.setItem('email', $("#email").val()); // this is jquery</pre>
 					</li>
 				</ul>
 				<p>Then, I just used those two keys to:</p>
 				<ul class="ch-list">
 					<li>
-						<p>Redirect to shipping step any time you go to login step and you've already been there</p>
+						Redirect to shipping step any time you go to login step and you've already been there
 						<pre>
 if (localStorage.getItem('login') === 'true') {
 	document.location.href = './shipping.html'; 
-}
-						</pre>
+}</pre>
 					</li>
 					<li>
-						<p>Show the email you used to log in</p>
+						Show the email you used to log in
 						<pre>
-$("#userEmail").text(localStorage.getItem('email'));
-						</pre>
+$("#userEmail").text(localStorage.getItem('email'));</pre>
 					</li>
 				</ul>
 				<h2>What about log out?</h2>
 				<p>I just need to delete the key I created, and it would be like if nothing had happened:</p>
 				<pre>
-localStorage.removeItem("login");
-				</pre>	
+localStorage.removeItem("login");</pre>	
 				<a class="ch-btn-skin ch-btn-small" href="./index.html">Go back to home</a>
 				<p class="ch-box-attention"><strong>Disclaimer:</strong> I needed to do this (skip login if you already did it) for an interactive prototype. I know enough of Javascript to write this stuff without asking my developer for help. So, there's probably a better way to do this.</p>
 			</section>	

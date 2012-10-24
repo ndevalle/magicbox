@@ -65,3 +65,10 @@ ol.wizard li.current {
 	height: 20px;
 	margin-top: -20px;
 }
+
+pre {
+	margin: 10px;
+	border: 1px solid #ddd;
+	background: #eee;
+	padding: 10px; 
+}
