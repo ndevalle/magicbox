@@ -1,0 +1,78 @@
+<!doctype html>
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7 ]> <html lang="es" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="es" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="es" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="es" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+	<head>
+		<script></script>
+		<meta charset="utf-8">
+		<title>Login demo</title>
+
+		<link rel="stylesheet" href="http://static.mlstatic.com/org-img/ch/ui/0.11.1/chico-mesh.min.css">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	
+	<body>
+		
+		<p class="user">
+			<span id="userEmail"></span> (<a href="logout.html">Logout</a>)
+		</p>
+		<div class="ch-box-lite">	
+
+			<ol class="wizard">
+				<li><span>Login</span></li><li><span>Shipping</span></li><li><span>Payment</span></li><li class="current last"><span>Summary</span></li>
+			</ol>
+			
+			<section>
+				<h1>So, what happened?</h1>
+				<p>On Login step, I saved two keys: </p>
+				<ul class="ch-list">
+					<li>
+						<p>The fact that you submited the login form</p>
+						<pre>
+localStorage.setItem('login', 'true');
+						</pre>
+					</li>
+					<li>
+						<p>The value of the email field</p>
+						<pre>
+localStorage.setItem('email', $("#email").val()); // this is jquery
+						</pre>
+					</li>
+				</ul>
+				<p>Then, I just used those two keys to:</p>
+				<ul class="ch-list">
+					<li>
+						<p>Redirect to shipping step any time you go to login step and you've already been there</p>
+						<pre>
+if (localStorage.getItem('login') === 'true') {
+	document.location.href = './shipping.html'; 
+}
+						</pre>
+					</li>
+					<li>
+						<p>Show the email you used to log in</p>
+						<pre>
+$("#userEmail").text(localStorage.getItem('email'));
+						</pre>
+					</li>
+				</ul>
+				<h2>What about log out?</h2>
+				<p>I just need to delete the key I created, and it would be like if nothing had happened:</p>
+				<pre>
+localStorage.removeItem("login");
+				</pre>	
+				<a class="ch-btn-skin ch-btn-small" href="./index.html">Go back to home</a>
+				<p class="ch-box-attention"><strong>Disclaimer:</strong> I needed to do this (skip login if you already did it) for an interactive prototype. I know enough of Javascript to write this stuff without asking my developer for help. So, there's probably a better way to do this.</p>
+			</section>	
+		</div>	
+		
+		<script src="http://static.mlstatic.com/org-img/ch/ui/0.11.1/chico-jquery.min.js"></script>
+		<script type="text/javascript">
+			$("#userEmail").text(localStorage.getItem('email'));
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7 ]> <html lang="es" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="es" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="es" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="es" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+	<head>
+		<script></script>
+		<meta charset="utf-8">
+		<title>Login demo</title>
+
+		<link rel="stylesheet" href="http://static.mlstatic.com/org-img/ch/ui/0.11.1/chico-mesh.min.css">
+		<link rel="stylesheet" href="styles.css">
+		<script>
+	      	if (localStorage.getItem('login') === 'true') {
+	      		document.location.href = './shipping.html'; // if user is logged in, redirect to shipping step
+	    	}
+
+</script>
+	</head>
+	
+	<body>
+		
+		<div class="ch-box-lite">	
+
+			<ol class="wizard">
+				<li class="current"><span>Login</span></li><li><span>Shipping</span></li><li><span>Payment</span></li><li class="last"><span>Summary</span></li>
+			</ol>
+			
+			<section>
+				<form class="ch-form" action="shipping.html" method="POST">
+					<fieldset>
+				        <p class="ch-form-row">
+				            <label for="user">E-mail:</label>
+				            <input type="text" id="email" name="user" size="30">
+				        </p>
+				        <p class="ch-form-row">
+				            <label for="pass">Password:</label>
+				            <input type="password" id="pass" name="pass" size="30">
+				        </p>
+				        <p class="ch-form-actions">
+				            <input type="submit" name="confirmation" value="Login" class="ch-btn">
+				        </p>
+				    </fieldset>
+				</form>
+
+			</section>	
+		</div>	
+		
+		<script src="http://static.mlstatic.com/org-img/ch/ui/0.11.1/chico-jquery.min.js"></script>
+		<script type="text/javascript">
+			var email = $("#email").required("Required field").and().email("Enter an e-mail address");
+			var password = $("#pass").required("Required field");
+
+			 
+			 $('form').submit(function(){
+			 	//save the values
+			 	localStorage.setItem('login', 'true'); // login key 
+      			localStorage.setItem('email', $("#email").val()); // user email
+			 });
+
+		</script>
+
+	</body>
+</html>

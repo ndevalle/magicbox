@@ -1,0 +1,67 @@
+body {
+	max-width: 700px;
+	min-width: 340px;
+	margin-top: 30px;
+	font-size: 14px;
+}
+
+h1 {
+	margin-bottom: 15px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+}
+p {
+	margin: 5px 0 10px;
+}
+.ch-box-lite {
+	padding: 0;
+}
+.ch-btn,
+.ch-btn-skin {
+	margin: 10px 10px 10px 0;
+}
+section {
+	padding: 10px;
+}
+
+ol.wizard, ol.wizard li span, ol.wizard li.current span {
+	background: url(path-cholite.png) 
+}
+
+ol.wizard {
+	background-repeat: repeat-x;
+	background-position: 0 -31px;
+	margin: 0;
+	padding: 0;
+	line-height: 33px;
+	position:relative;
+	height: 43px;
+}
+
+ol.wizard li {
+			display: inline;
+}
+
+ol.wizard li span, ol.wizard li.current span {
+	padding: 3px 20px 3px 15px;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-position: right 0px;
+}
+
+ol.wizard li.last span {
+	background-image: none;
+}
+
+ol.wizard li.current {
+	background: url(path-cone.png) no-repeat bottom center;
+	padding-bottom: 16px;
+	font-weight:bold;
+}
+
+.user {
+	text-align: right;
+	padding: 3px 0;
+	height: 20px;
+	margin-top: -20px;
+}

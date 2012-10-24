@@ -1,0 +1,48 @@
+<!doctype html>
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7 ]> <html lang="es" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="es" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="es" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="es" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+	<head>
+		<script></script>
+		<meta charset="utf-8">
+		<title>Login demo</title>
+
+		<link rel="stylesheet" href="http://static.mlstatic.com/org-img/ch/ui/0.11.1/chico-mesh.min.css">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	
+	<body>
+		
+		<p class="user">
+			<span id="userEmail"></span> (<a href="logout.html">Logout</a>)
+		</p>
+		<div class="ch-box-lite">	
+
+			<ol class="wizard">
+				<li><span>Login</span></li><li><span>Shipping</span></li><li class="current"><span>Payment</span></li><li class="last"><span>Summary</span></li>
+			</ol>
+			
+			<section>
+				<form class="ch-form" action="summary.html" method="POST">
+					<fieldset>
+						<legend>This is the payment step</legend>
+				        <p>
+				            <input type="submit" name="confirmation" value="Next" class="ch-btn">
+				            <a href="index.html">Cancel</a>
+				        </p>
+				    </fieldset>
+				</form>
+
+			</section>	
+		</div>	
+		
+		<script src="http://static.mlstatic.com/org-img/ch/ui/0.11.1/chico-jquery.min.js"></script>
+		<script type="text/javascript">
+			$("#userEmail").text(localStorage.getItem('email'));
+		</script>
+
+	</body>
+</html>
