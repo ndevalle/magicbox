@@ -12,6 +12,16 @@
 		<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../chico/css/chico-0.13.css">
 	<style type="text/css">
+
+	/* Fix Android */
+	body { 
+	  -webkit-animation: bugfix infinite 1s; 
+	}
+	@-webkit-keyframes bugfix { 
+	  from {padding:0;} 
+	  to {padding:0;} 
+	}
+
 	body {
 		min-width: 320px;
 		max-width: 100%;
