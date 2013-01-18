@@ -10,7 +10,7 @@
 		<meta charset="utf-8">
 		<title>Login demo</title>
 
-		<link rel="stylesheet" href="http://static.mlstatic.com/org-img/ch/ui/0.11.1/chico-mesh.min.css">
+		<link rel="stylesheet" type="text/css" href="../../chico/css/chico.css">
 		<link rel="stylesheet" href="styles.css">
 		<script>
 	      	if (localStorage.getItem('login') === 'true') {
@@ -48,7 +48,8 @@
 			</section>	
 		</div>	
 		
-		<script src="http://static.mlstatic.com/org-img/ch/ui/0.11.1/chico-jquery.min.js"></script>
+		<script src="../../chico/js/jquery.js"></script>
+		<script src="../../chico/js/chico.js"></script>
 		<script type="text/javascript">
 			var email = $("#email").required("Required field").and().email("Enter an e-mail address");
 			var password = $("#pass").required("Required field");
