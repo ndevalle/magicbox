@@ -1,0 +1,243 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>	<html class="no-js lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>	<html class="no-js lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
+
+<head> 
+	<script></script> 
+	<meta charset="utf-8"> 
+	<title>CSS3 Only Responsive Navigation</title>
+		<meta name="HandheldFriendly" content="True">  
+		<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="http://static.mlstatic.com/org-img/ch/ui/0.13.1/chico-mesh.min.css">
+	<style type="text/css">
+
+	/* Fix Android */
+	body { 
+	  -webkit-animation: bugfix infinite 1s; 
+	}
+	@-webkit-keyframes bugfix { 
+	  from {padding:0;} 
+	  to {padding:0;} 
+	}
+
+	body {
+		min-width: 320px;
+		max-width: 100%;
+		padding: 0;
+		font-size: 14px;
+		font-family: 'Lucida Grande',Arial,sans-serif;
+	}
+
+
+	header {
+		background: #000;
+		color: #fff;
+		z-index: 1;	
+		height: 50px;
+		padding: 0 30px;
+	}
+
+	header h1 {
+		font-size: 24px;
+		color: #ffffff;
+		text-shadow: 0 1px 0 #333;
+		width: 35%;
+		float: left;
+		line-height: 50px;
+		margin: 0;
+	}
+
+	section {
+		padding: 30px;
+	}
+
+	section h1,
+	section h2 {
+		margin: 20px 0 10px ;
+	}
+
+	/* mobile */
+	@media only screen and/*!YUI-Compressor */(max-width: 600px)  {
+
+
+
+		header h1  {
+			width: 100%;
+			float: none;
+			font-size: 22px;
+			text-align: center;
+		}
+
+		/* mobile */
+
+		#nav:before{
+			color: #fff;
+			font-size: 26px;
+		}
+
+		nav {
+			position: absolute;
+			right: 0px;
+			top:12px;
+			left: 0px;
+			text-align: left;
+		}
+
+		nav label {
+			text-align: right;
+			display: inline-block;
+			width: 30px;	
+			cursor: pointer;
+		  	user-select: none;
+		  	margin-left: 12px;
+		  	margin-top: 3px;
+		}
+
+		nav ul {
+		
+			padding: 0px;
+			margin: 10px 0px 20px 0;
+			background: #fff;
+			position: relative;
+			top: -500px;
+			z-index: -100;
+			background: #fff;
+			transition: 0.4s ease-in-out;
+			-o-transition: 0.4s ease-in-out;
+			-moz-transition: 0.4s ease-in-out;
+			-webkit-transition: all 0.4s ease-in-out;
+
+		}
+
+		nav a {
+			display: inline-block;
+			width: 100%;
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* Opera/IE 8+ */
+			padding: 15px;
+			font-size: 18px;
+			border-bottom: 1px solid #ccc;
+
+		}
+
+		nav a,
+		nav a:hover,
+		nav a:visited {
+			color: #333;
+			text-decoration: none;
+		}
+
+		nav a:hover {
+			background: #ddd;
+		}
+
+		nav a:after {
+			font-family: 'icons';
+			content: "\f054";
+			position: absolute;
+			right: 20px;
+		}
+		nav input[type=checkbox] {
+		   position: absolute;
+		   top: -9999px;
+		   left: -9999px;
+		}
+
+		nav input[type=checkbox]:checked ~ ul {
+			top:0;
+			z-index: 1;
+			transition: 0.9s ease-in-out;
+			-o-transition: 0.9s ease-in-out;
+			-moz-transition: 0.9s ease-in-out;
+			-webkit-transition: all 0.9s ease-in-out;
+
+		}
+	}
+
+		@media only screen and/*!YUI-Compressor */(min-width: 600px) {
+
+
+			nav {
+				width: 60%;
+				float: right;
+				text-align: right;
+			}
+
+			nav li {
+				display: inline-block;
+				padding: 0 10px;
+				line-height: 50px;
+				color: #fff;
+			}
+
+			nav a {
+				color: #fff;
+				padding: 7px 10px;
+				text-decoration: none;
+			}
+
+			nav a:visited {
+				color: #fff;
+			}
+
+			nav a:hover {
+				text-decoration: none;
+				background: #ddd;
+				border-radius: 3px;
+				color: #333;
+			}
+
+			nav input,
+			nav label {
+				display: none;
+			}
+		}
+
+
+	</style>
+
+
+</head>
+<body>
+
+
+<div class="container">
+	
+
+
+	<header>
+		<h1>My Site Title</h1>
+		<nav id="main">
+			<input type="checkbox" id="menu" />
+			<label class="ch-icon-reorder" id="nav" for="menu" onclick></label>
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/faqs">FAQs</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>	
+
+	<section>
+		<h1>CSS3 ONLY Responsive Navigation</h1>
+
+		<p><strong>No javascript needed!</strong> Resize the window to see the responsiveness.</p>
+
+		<h2>How did I do it?</h2>
+		<ul class="ch-list">
+			<li><a href="http://timpietrusky.com/advanced-checkbox-hack">Advanced Checkbox Hack</a> by Tim Pietrusky</li>
+			<li><a href="http://www.w3.org/TR/css3-mediaqueries/">CSS Media Queries</a></li>
+			<li><a href="http://www.w3.org/TR/css3-transitions/">CSS3 Transitions</a></li>
+			<li><a href="http://www.chico-ui.com.ar">Chico UI</a></li>
+		</ul>
+	</section>
+
+</div>
+
+
+</body>
+</html>
