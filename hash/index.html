@@ -14,7 +14,7 @@
 		#firstStep,
 		#secondStep,
 		#thirdStep {
-			width: 200px;
+			width: 300px;
 			height: 200px;
 			margin: 30px;
 			padding: 10px;
@@ -40,20 +40,29 @@
 
 <div class="box">
 	<h1>Hash URL</h1>
-	<p>Trying to learn how to make pseudo steps using urls with hash.</p>
+	<p>Trying to learn how to make pseudo steps using urls with hash for permalinks.</p>
 
+	<div id="steps">
+		<p>Select a step</p>
+		<ul>
+			<li><a href="#">step 1 (red)</a></li>
+			<li><a href="#step2">step 2 (blue)</a></li>
+			<li><a href="#step3">step 3 (yellow)</a></li>
+		</ul>
+	</div>
 
 	<div id="firstStep">
 		<h2>First Step</h2>
-		<input type="button" class="ch-btn ch-primary ch-skin" value="Step 2 >>" id="step1">
+		<input type="button" class="ch-btn" value="go to blue step (2) >>" id="step1">
 	</div>
 	<div id="secondStep" class="ch-hide">
 		<h2>Second Step</h2>
-		<input type="button" class="ch-btn ch-primary ch-skin" value="Step 3 >>" id="step2">
+		<input type="button" class="ch-btn" value="go to yellow step (3) >>" id="step2">
 	</div>
 	
 	<div id="thirdStep" class="ch-hide">
 		<h2>Third Step</h2>
+		<input type="button" class="ch-btn" value="go to red step (1) >>" id="step3">
 	</div>
 </div>
 
@@ -62,7 +71,7 @@
 <script src="../chico/js/chico.js"></script>
 <script>
 
-
+$("#steps").dropdown();
 
 $("#step1").bind("click", function(){
 	secondStep()
@@ -72,6 +81,11 @@ $("#step1").bind("click", function(){
 $("#step2").bind("click", function(){
 	thirdStep()
 	window.location.hash = "step3";
+	});
+
+$("#step3").bind("click", function(){
+	firstStep()
+	window.location.hash = "";
 	});
 
 function firstStep() {
