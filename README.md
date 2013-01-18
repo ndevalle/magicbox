@@ -3,4 +3,4 @@
 
 Experimental stuff I do for learning.
 
-[Check it out] (https://ndevalle.github.com/magicbox)
+[Check it out] (http://ndevalle.github.com/magicbox)
