@@ -1,0 +1,68 @@
+<!doctype html>
+<!--[if IE 7]>	<html class="no-js  lt-ie10 lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>	<html class="no-js lt-ie10 lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>	<html class="no-js lt-ie10 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
+<head>
+	<script></script>
+	<meta charset="utf-8" />
+	<title>Chico UI</title>
+
+	<!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="cleartype" content="on">
+
+	<link rel="stylesheet" href="css/reset-min-0.13.1.css">
+	<link rel="stylesheet" href="css/chico-min-0.13.1.css">
+	<link rel="stylesheet" href="css/mesh-min-2.1.css">
+	
+</head>
+
+<body>
+	<h1>Radios</h1>
+
+	<form id="close-claim-form" action="closeClaim" method="POST">
+	<fieldset>
+		<div class="ch-list-options ch-form-required required-option">
+			<h4 id="reason-close">Cu&eacute;ntanos, &iquest;c&oacute;mo resolvieron el problema?</h4>
+			<ul>
+				<li class="ch-form-row">
+					<input id="seller_promises_send_money" type="radio" name="reason-option" value="seller_promises_send_money">
+					<label for="seller_promises_send_money">El vendedor prometi&oacute; enviarme el dinero si cierro el reclamo.</label>
+				</li>
+				<li class="ch-form-row">
+					<input id="item_received" type="radio" name="reason-option" value="item_received">
+					<label for="item_received">Ya recib&iacute; el producto</label>
+				</li>
+				<li class="ch-form-row">
+					<input id="seller_send_money" type="radio" name="reason-option" value="seller_send_money">
+					<label for="seller_send_money">El vendedor me devolvio el dinero</label>
+				</li>
+				<li class="ch-form-row">
+					<input id="other" type="radio" name="reason-option" value="other">
+					<label for="other">otro</label>
+				</li>
+			</ul>
+		</div>
+	</fieldset>
+		<div>
+			<p class="ch-form-row ch-form-required ch-form-disabled">
+		       <label for="input_text"></label>
+		       <input type="text" placeholder="" size="20" name="other_reason" id="other_reason" required="required">
+	  	 	</p>
+		</div>
+		<div class="ch-form-actions">
+			<input type="submit" id="close-claim-btn" value="Cerrar" class="ch-btn ch-btn-small" /> <a id="cancel" href="">Cancelar</a>
+		</div>
+	</form>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/chico-min-0.13.1.js"></script>
+	<script>
+	var form= $("#close-claim-form").form();
+	var validation12 = $('.required-option').required("Elige como resolviste el problema.");
+
+	</script>
+</body>
+</html>
